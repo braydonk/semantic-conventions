@@ -7,6 +7,7 @@ groups:
     unit: "s"
     attributes:
       - ref: process.cpu.state
+        brief: "The CPU state for this data point. A process SHOULD be characterized _either_ by data points with no `state` labels, _or only_ data points with `state` labels."
 
   - id: metric.process.cpu.utilization
     type: metric
@@ -16,6 +17,7 @@ groups:
     unit: "1"
     attributes:
       - ref: process.cpu.state
+        brief: "The CPU state for this data point. A process SHOULD be characterized _either_ by data points with no `state` labels, _or only_ data points with `state` labels."
 
   - id: metric.process.memory.usage
     type: metric
@@ -42,6 +44,7 @@ groups:
     unit: "By"
     attributes:
       - ref: disk.io.direction
+        brief: "The type of page fault for this data point. Type `major` is for major/hard page faults, and `minor` is for minor/soft page faults."
 
   - id: metric.process.network.io
     type: metric
@@ -85,3 +88,5 @@ groups:
     unit: "{fault}"
     attributes:
       - ref: process.paging.fault_type
+        brief: "Specifies whether the context switches for this data point were voluntary or involuntary."
+

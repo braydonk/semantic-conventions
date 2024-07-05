@@ -79,11 +79,8 @@ groups:
   - id: registry.process.attributes
     prefix: process
     type: attribute_group
-    brief: >
-        Metric attributes that appear on some process metrics.
     attributes:
       - id: cpu.state
-        brief: "The CPU state for this data point. A process SHOULD be characterized _either_ by data points with no `state` labels, _or only_ data points with `state` labels."
         type:
           allow_custom_values: true
           members:
@@ -94,7 +91,6 @@ groups:
             - id: wait
               value: 'wait'
       - id: paging.fault_type
-        brief: "The type of page fault for this data point. Type `major` is for major/hard page faults, and `minor` is for minor/soft page faults."
         type:
           allow_custom_values: true
           members:
@@ -103,7 +99,6 @@ groups:
             - id: minor
               value: 'minor'
       - id: context_switch_type
-        brief: "Specifies whether the context switches for this data point were voluntary or involuntary."
         type:
           allow_custom_values: true
           members:
