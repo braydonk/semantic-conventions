@@ -294,3 +294,12 @@ groups:
           of the
           [/proc/\[PID\]/cgroup](https://man7.org/linux/man-pages/man7/cgroups.7.html)
           file.
+      - id: process.linux.namespace.pid.id
+        type: int
+        stability: release_candidate
+        brief: >
+          The ID of the
+          [pid_namespace](https://man7.org/linux/man-pages/man7/pid_namespaces.7.html)
+          where this process resides. Expected to be the inode number of
+          `/proc/self/ns/pid`.
+        examples: [4026531836]
